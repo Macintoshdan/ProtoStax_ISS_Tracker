@@ -29,7 +29,7 @@ if sys.version_info[0] < 3:
 
 from enum import Enum
 import signal
-import epd2in7b
+import epd3in52b
 import epdconfig
 
 from PIL import Image,  ImageDraw,  ImageFont, ImageOps
@@ -55,8 +55,8 @@ DISPLAY_REFRESH_INTERVAL = 20 # Number of DATA_INTERVAL between successive displ
 DATA_LIMIT = 1440 # positions limit
 
 # Note:
-# The dimensions of the 2.7 in ePaper display are
-# 264 x 176
+# The dimensions of the 3.52 in ePaper display are
+# 360 x 240
 
 class Display(object):
     def __init__(self, imageWidth, imageHeight):
@@ -187,7 +187,7 @@ def ctrl_c_handler(signal, frame):
     # because slepe/module_exit closes the SPI handle, which wasn't getting initialized in module_init.
     # I've also added a module_sleep (which epd.sleep calls) which does not call GPIO.cleanup, and
     # made module_exit call both module_sleep and GPIO.cleanup
-    epd = epd2in7b.EPD()
+    epd = epd3in52b.EPD()
     print("Clearing screen before exiting ... Please wait!")
     epd.init()
     epd.Clear()
