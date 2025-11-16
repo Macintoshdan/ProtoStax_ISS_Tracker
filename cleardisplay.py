@@ -23,7 +23,7 @@ from PIL import Image,ImageDraw,ImageFont
 import traceback
 
 try:
-    epd = epd2in7b.EPD()
+    epd = epd3in52b.EPD()
     epd.init()
     print("Clear...")
     epd.Clear()
