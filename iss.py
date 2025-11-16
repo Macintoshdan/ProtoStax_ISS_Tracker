@@ -120,10 +120,10 @@ def main():
     # API to get ISS Current Location
     URL = 'http://api.open-notify.org/iss-now.json'
 
-    # Initialize and clear the 2in7b (tri-color) display
-    epd = epd2in7b.EPD()
+    # Initialize and clear the 3in52b (tri-color) display
+    epd = epd3in52b.EPD()
 
-    display = Display(epd2in7b.EPD_HEIGHT, epd2in7b.EPD_WIDTH)
+    display = Display(epd3in52b.EPD_HEIGHT, epd3in52b.EPD_WIDTH)
 
     # Store positions in list
     positions = []
