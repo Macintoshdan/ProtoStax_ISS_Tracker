@@ -17,7 +17,7 @@
 import sys
 sys.path.append(r'lib')
 
-import epd2in7b
+import epd3in52b
 import time
 from PIL import Image,ImageDraw,ImageFont
 import traceback
