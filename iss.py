@@ -100,7 +100,9 @@ class Display(object):
         # imageRed = imageRed.transpose(Image.ROTATE_180)
         # imageBlack = imageBlack.transpose(Image.ROTATE_180)
         
-        w1, h1 = font16.getsize(date_time) 
+        #w1, h1 = font16.getsize(date_time) 
+        bbox = font16.getbbox(date_time)
+        w1, h1 = bbox[2] - bbox[0], bbox[3] - bbox[1]
         drawred.text(((264-w1)/2,176-h1), date_time, font = font16, fill = 0)
 
         # return the rendered Red and Black images
